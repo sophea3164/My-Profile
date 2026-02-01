@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[context.production]
+  environment = { APP_ENV = "production", APP_DEBUG = "false" }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
